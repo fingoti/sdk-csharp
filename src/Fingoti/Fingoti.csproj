@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo><!-- setting GenerateAssemblyInfo to false causes this bug https://github.com/dotnet/project-system/issues/3934 -->
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>Fingoti</AssemblyName>
+    <PackageId>Fingoti.SDK</PackageId>
+    <OutputType>Library</OutputType>
+    <Authors>Fingoti</Authors>
+    <Company>Fingoti</Company>
+    <AssemblyTitle>OpenAPI Library</AssemblyTitle>
+    <Description>An easy to use library to access Fingoti API functions and device control</Description>
+    <Copyright></Copyright>
+    <RootNamespace>Fingoti</RootNamespace>
+    <Version>1.0.0</Version>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Fingoti.xml</DocumentationFile>
+    <RepositoryUrl>https://github.com/fingoti/sdk-csharp</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <Nullable>annotations</Nullable>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>fingoti, sdk, iot, pebl</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JsonSubTypes" Version="1.9.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="RestSharp" Version="108.0.1" />
+    <PackageReference Include="Polly" Version="7.2.3" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="System.Web" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web" />
+  </ItemGroup>
+</Project>
