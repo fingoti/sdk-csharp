@@ -1,4 +1,7 @@
-# Fingoti SDK
+## Fingoti SDK
+
+[![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/fingoti/sdk-csharp)
+[![NuGet stable version](https://badgen.net/nuget/v/fingoti.sdk)](https://nuget.org/packages/fingoti.sdk)
 
 The Fingoti SDK makes it easy to use Fingoti infrastructure to manage your organisations & users as well as communicate with your devices, follow the examples below to get started
 
@@ -18,7 +21,9 @@ The Fingoti SDK makes it easy to use Fingoti infrastructure to manage your organ
 
 ## Install
 
-Some cmd here for install
+```
+dotnet add package Fingoti.SDK --version 1.0.0
+```
 
 <br>
 <br>
@@ -128,4 +133,5 @@ catch (ApiException e)
     Debug.Print(e.StackTrace);
 }
 ```
+
 After running this example you should see 2 outputs in your console, the first one is the what was sent to the device and the second is what the device responded with, This is just a small introduction into the command builder and you can find a full list of [avaliable commands](https://developer.fingoti.com/hardware/protocol)
